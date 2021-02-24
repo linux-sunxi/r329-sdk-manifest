@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="../R329_Tina_jishu/R329-Tina-jishu" name="tina" review="http://gerrit.allwinnertech.com:8081/ssh_info"/>
+  
+  <default remote="tina" revision="smartx-r329-tina-jishu"/>
+  
+  <project name="lichee/brandy-2.0/tools" revision="smartx-r329-tina-jishu">
+    <copyfile dest="lichee/brandy-2.0/build.sh" src="build.sh"/>
+  </project>
+  <project name="lichee/brandy-2.0/u-boot-2018"/>
+  <project name="lichee/device/config/common" path="device/config/common" revision="smartx-r329-tina-jishu"/>
+  <project name="lichee/device/config/r329" path="device/config/chips/r329"/>
+  <project name="lichee/device/config/rootfs_tar" path="device/config/rootfs_tar" revision="smartx-r329-tina-jishu"/>
+  <project name="lichee/linux-4.9"/>
+  <project name="product/tina/build" path="build">
+    <copyfile dest="Makefile" src="top_main.mk"/>
+    <copyfile dest="rules.mk" src="rules.mk"/>
+  </project>
+  <project name="product/tina/config" path="config">
+    <copyfile dest="Config.in" src="top_config.in"/>
+  </project>
+  <project name="product/tina/dl" path="dl"/>
+  <project name="product/tina/package" path="package"/>
+  <project name="product/tina/prebuilt" path="prebuilt"/>
+  <project name="product/tina/scripts" path="scripts"/>
+  <project name="product/tina/target" path="target"/>
+  <project name="product/tina/toolchain" path="toolchain"/>
+  <project name="product/tina/tools" path="tools"/>
+</manifest>
